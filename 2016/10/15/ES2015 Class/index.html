@@ -5,12 +5,19 @@
   
   <title>Pedclub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="ES2015 的类继承与 ES5 实现类继承的异同我们先来看看 ES2015 原生支持的类继承模式
+12345678910111213141516171819202122class Parent &amp;#123;    constructor(x, y) &amp;#123;        this.x = x;        this.y = y;    &amp;#125;    say() &amp;#123;">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Pedclub">
-<meta property="og:url" content="http://www.pedclub.com/index.html">
+<meta property="og:url" content="http://www.pedclub.com/2016/10/15/ES2015 Class/index.html">
 <meta property="og:site_name" content="Pedclub">
+<meta property="og:description" content="ES2015 的类继承与 ES5 实现类继承的异同我们先来看看 ES2015 原生支持的类继承模式
+12345678910111213141516171819202122class Parent &amp;#123;    constructor(x, y) &amp;#123;        this.x = x;        this.y = y;    &amp;#125;    say() &amp;#123;">
+<meta property="og:updated_time" content="2016-10-14T16:44:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pedclub">
+<meta name="twitter:description" content="ES2015 的类继承与 ES5 实现类继承的异同我们先来看看 ES2015 原生支持的类继承模式
+12345678910111213141516171819202122class Parent &amp;#123;    constructor(x, y) &amp;#123;        this.x = x;        this.y = y;    &amp;#125;    say() &amp;#123;">
   
     <link rel="alternate" href="/atom.xml" title="Pedclub" type="application/atom+xml">
   
@@ -59,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ES2015 Class" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ES2015 Class" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/15/ES2015 Class/" class="article-date">
   <time datetime="2016-10-14T16:24:09.000Z" itemprop="datePublished">2016-10-15</time>
@@ -95,190 +100,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/14/hello-world/" class="article-date">
-  <time datetime="2016-10-14T15:29:21.000Z" itemprop="datePublished">2016-10-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2016/10/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pedclub.com/2016/10/14/hello-world/" data-id="ciu9zqrna000ji5s655i1sb0k" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/" class="article-date">
-  <time datetime="2016-04-13T09:22:16.000Z" itemprop="datePublished">2016-04-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/设计理论/">设计理论</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/">PhotoShop颜色模式入门</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们在开启ps软件之前不妨思考一下这样一个问题，我们的照片或图片，在不同载体上的呈现是否有所不同呢？比如在我们自己的显示器上或者将其在纸张上打印出来，我们是不是观察到了两者在观感上的差异，接下来我将对这些差异背后的原理做一个总结和解释，以供参考。</p>
-<p><strong>光与感知的关系</strong></p>
-<p>在我们日常的生活中其实有两种非常不一样的颜色模式，可能大多数人并未去仔细区分二者的异同。具体来说，光的表现形式和日常颜色的表现形式是有所不同的，但二者却又互为一体。听起来是否像个哲学式的命题？可能有点。但无论如何，这本质上其实还是是光在不同情况下的表现，在进入人眼途径上一种是直接进入人眼，另一种则经过反射进入人眼，那么我们接下来具体看看这两种模式的原理和具体表现。</p>
-        
-          <p class="article-more-link">
-            <a href="/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pedclub.com/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/" data-id="ciu9zqrnh000oi5s629jadrm2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/04/07/VM/" class="article-date">
-  <time datetime="2016-04-07T05:58:08.000Z" itemprop="datePublished">2016-04-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/教程/">教程</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/07/VM/">安装虚拟系统备忘</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>近期临近毕业，土木工程专业毕业设计需要很多在32位机器下才能运行的软件，而很多同学电脑的系统都是64位windows。解决办法自然是去重新再装一个32位的系统，而本人近期又需要很多64位下的工作软件，矛盾就来了，因此不得不找寻另外的途径，于是就有了这篇备忘。</p>
-<p>1.首先在这个网站下载安装虚拟机软件<a href="http://rj.baidu.com/soft/detail/13808.html?ald">http://rj.baidu.com/soft/detail/13808.html?ald</a></p>
-<p>2.然后再在这个网站<a href="http://www.upmobi.cn/ylxp.html">http://www.upmobi.cn/ylxp.html</a>下载windows xp 32位系统镜像。（为什么是xp呢，因为相对较小只有700兆，而且经本人测试完美运行各种32位软件。）<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/04/07/VM/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pedclub.com/2016/04/07/VM/" data-id="ciu9zqrmw0009i5s6gbldmh5t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/14/hello-world-1/" class="article-date">
-  <time datetime="2016-03-14T06:22:49.000Z" itemprop="datePublished">2016-03-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/未分类/">未分类</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/hello-world-1/">世界，您好！</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pedclub.com/2016/03/14/hello-world-1/" data-id="ciu9zqrn7000hi5s6keo8r961" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
