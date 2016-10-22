@@ -206,4 +206,24 @@
     
   </entry>
   
+  <entry>
+    <title>一图搞定关于JavaScript 的原型及函数</title>
+    <link href="http://www.pedclub.com/2016/01/14/protoImg/"/>
+    <id>http://www.pedclub.com/2016/01/14/protoImg/</id>
+    <published>2016-01-14T06:22:49.000Z</published>
+    <updated>2016-10-22T17:45:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="images/Vproto.jpg" alt="Prototype"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;images/Vproto.jpg&quot; alt=&quot;Prototype&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
 </feed>
