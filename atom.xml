@@ -99,24 +99,24 @@
     <link href="http://www.pedclub.com/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/"/>
     <id>http://www.pedclub.com/2016/04/13/photoshop-e9-a2-9c-e8-89-b2-e6-a8-a1-e5-bc-8f-e5-85-a5-e9-97-a8/</id>
     <published>2016-04-13T09:22:16.000Z</published>
-    <updated>2016-10-22T11:36:14.000Z</updated>
+    <updated>2016-11-10T15:33:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>我们在开启ps软件之前不妨思考一下这样一个问题，我们的照片或图片，在不同载体上的呈现是否有所不同呢？比如在我们自己的显示器上或者将其在纸张上打印出来，我们是不是观察到了两者在观感上的差异，接下来我将对这些差异背后的原理做一个总结和解释，以供参考。</p>
 <h2 id="光与感知的关系"><a href="#光与感知的关系" class="headerlink" title="光与感知的关系"></a>光与感知的关系</h2><p>在我们日常的生活中其实有两种非常不一样的颜色模式，可能大多数人并未去仔细区分二者的异同。具体来说，光的表现形式和日常颜色的表现形式是有所不同的，但二者却又互为一体。听起来是否像个哲学式的命题？可能有点。但无论如何，这本质上其实还是是光在不同情况下的表现，在进入人眼途径上一种是直接进入人眼，另一种则经过反射进入人眼，那么我们接下来具体看看这两种模式的原理和具体表现。</p>
-<h2 id="1，加色模式"><a href="#1，加色模式" class="headerlink" title="1，加色模式"></a>1，加色模式</h2><p>我们先来着眼于光在人眼的感知形式，首先我们要确定的一点是，光的颜色模式是“加色模式”。什么是加色模式？光的三原色是“红（Red），绿（Green），蓝（Blue）”，在数值上每种原色用0-255这个区间共256个数值来表示该原色物理层面上显像像素点的亮度，例如：RGB（113,159,66）表示的就是，红色（R）亮度是113个单位，绿色159个单位，而蓝色66个单位，这三种亮度不同的三原色光混合就得到了一块其他色相的光，在我的电脑上这是一块深绿色。</p>
-<p><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160413171021-300x200.png" alt="QQ截图20160413171021"></p>
-<p>那么加色模式的具体表现就是，在我们将三种不同的光都设置最大值RGB(255,255,255)时，我们会得到一块白色，而最小值RGB（0,0,0）则会得到一块黑色，这种随着色的增加，最终会得到包罗三原色的白色（可分可逆为三原色）的模式，我们将其称作加色模式。</p>
-<p><img src="http://www.pedclub.net/wp-content/uploads/2016/04/2000px-Bayer_pattern_on_sensor.svg_-300x195.png" alt="2000px-Bayer_pattern_on_sensor.svg"></p>
+<h2 id="1，加色模式"><a href="#1，加色模式" class="headerlink" title="1，加色模式"></a>1，加色模式</h2><p>我们先来着眼于光在人眼的感知形式，首先我们要确定的一点是，光的颜色模式是“加色模式”。什么是加色模式？光的三原色是“红<code>（Red）</code>，绿<code>（Green）</code>，蓝<code>（Blue）</code>”，在数值上每种原色用<code>0-255</code>这个区间共<code>256</code>个数值来表示该原色物理层面上显像像素点的亮度，例如：<code>RGB（113,159,66</code>）表示的就是，红色（R）亮度是113个单位，绿色159个单位，而蓝色66个单位，这三种亮度不同的三原色光混合就得到了一块其他色相的光，在我的电脑上这是一块深绿色。</p>
+<p><img src="/images/2016041317.png" alt="20160413171021"></p>
+<p>那么加色模式的具体表现就是，在我们将三种不同的光都设置最大值<code>RGB(255,255,255)</code>时，我们会得到一块白色，而最小值<code>RGB（0,0,0）</code>则会得到一块黑色，这种随着色的增加，最终会得到包罗三原色的白色（可分可逆为三原色）的模式，我们将其称作加色模式。</p>
+<p><img src="/images/2000pxBayer.png" alt="Bayer_pattern_on_sensor.svg"></p>
 <p>或许这有一点反直觉，因为我们在小时候的美术课上将不同颜色颜料混合起来总会得到一块乌黑的颜色，那为什么我们将加色模式的颜色混合起来却得到白色呢？接下来的“减色模式”可能是这个问题的答案。<br><a id="more"></a></p>
 <h2 id="2，减色模式"><a href="#2，减色模式" class="headerlink" title="2，减色模式"></a>2，减色模式</h2><p>在日常情况下，我们只要不看那些自发光的物体，譬如说显示器，台灯等时，我们其实生活在一个反射光的世界，也就是说我们日常生活看到的颜色比如杂志书本广告，各种物体等，其实都是是物体表面经过处理过后的光。这个理论是印刷业的基础概念之一，即我们看到的物体颜色并不是这个物体真正的颜色，而是其将光吸收一部分又反射一部分后，那一部分反射的光进入人眼便成了我们对该物体颜色的感知。</p>
 <p>例如下图中品红色物体本身就是将绿色光完全吸收后再将红色和蓝色光反射，而红色和蓝色光混合成了什么颜进入人眼呢，对了，那便是品红，因此我们看到了这个物体是品红色。（下图第二个黄光的反射原理有错误，你能发现是哪里错了么？）</p>
-<p><img src="http://www.pedclub.net/wp-content/uploads/2016/04/1-3-8-300x117.jpg" alt="1-3-8"><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160413164742-298x300.png" alt="QQ截图20160413164742"></p>
+<p><img src="/images/three.jpg" alt="18"><br><img src="/images/2016041316.png" alt="20160413164742"></p>
 <p>因此我们可以这样总结道，因为存在光直接到达人眼，和光被吸收一部分后再到达人眼这样两种方式，我们就会有两种不同的颜色模式。其本质还是光在不同途径下进入人眼所引起的差异，那么我们调制颜料换句话说就是在调制光反射材料，我们调制特定颜色的颜料就是在调制反射特定光的材料。</p>
-<p>我们可能会惊奇的发现加色模式的三原色相互结合得到的便是减色模式的三原色，分别是CMY，即青（Cyan），品红（Magenta），黄（Yellow）。相应的这三原色也有数值表示，但跟RGB不同的是以百分比来表示，而减色这种模式便表现在CMY（0,0,0）在理论上是一块白色（取决于打印纸张本来的颜色），而CMY（100,100,100）在理论上则是一块黑色（因为油墨的不纯净会得到一块更灰的黑色，因此印刷业引入了另外的颜色模式，即“CMYK”，其中的K就是专门的黑色油墨）。这就是减色模式，随着色的增加我们最终会得到“无色”的黑色（无法逆向分为CMY三原色）。</p>
-<p><img src="http://www.pedclub.net/wp-content/uploads/2016/04/LcBvQ.gif" alt="LcBvQ"></p>
-<p>而这三种颜色在上图中相对的颜色就是他的互补色，在实际表现中，我们将青色（Cyan）的光打到红色（Red）的墙上（注意此处是刷满红色颜料的墙，假设反射的是纯净的红色光），我们会什么也看不到，因为根据上述理论，我们的墙会将蓝色和绿色完全吸收掉，只反射红色光，而蓝色（Blue）和绿色（Green）光的混合便是青（Cyan）。</p>
+<p>我们可能会惊奇的发现加色模式的三原色相互结合得到的便是减色模式的三原色，分别是<code>CMY</code>，即青（<code>Cyan</code>），品红<code>（Magenta）</code>，黄<code>（Yellow）</code>。相应的这三原色也有数值表示，但跟<code>RGB</code>不同的是以百分比来表示，而减色这种模式便表现在CMY（0,0,0）在理论上是一块白色（取决于打印纸张本来的颜色），而CMY（100,100,100）在理论上则是一块黑色（因为油墨的不纯净会得到一块更灰的黑色，因此印刷业引入了另外的颜色模式，即<code>CMYK</code>，其中的K就是专门的黑色油墨）。这就是减色模式，随着色的增加我们最终会得到“无色”的黑色（无法逆向分为<code>CMY</code>三原色）。</p>
+<p><img src="/images/LcBvQ.gif" alt="LcBvQ"></p>
+<p>而这三种颜色在上图中相对的颜色就是他的互补色，在实际表现中，我们将青色<code>（Cyan）</code>的光打到红色<code>（Red）</code>的墙上（注意此处是刷满红色颜料的墙，假设反射的是纯净的红色光），我们会什么也看不到，因为根据上述理论，我们的墙会将蓝色和绿色完全吸收掉，只反射红色光，而蓝色（Blue）和绿色（Green）光的混合便是青<code>（Cyan）</code>。</p>
 <h2 id="3，相关"><a href="#3，相关" class="headerlink" title="3，相关"></a>3，相关</h2><p>最后我们来说一些与标题相关的问题，即RGB和CMYK这两种颜色模式在色域上的不同。在下图中，我们会发现RGB和CMYK在颜色域大小方位的不同，这表现在我们在显示屏幕工作下的RGB显示颜色有时候在印刷时并不能完美展现，因为有一些颜色不是二者的交集。因此我们在ps中会有专门的辅助工具，即下面第二幅图片中的三角叹号标志，用以提示我们这个颜色打印时超出色域。</p>
-<p><img src="http://www.pedclub.net/wp-content/uploads/2016/04/Farbraumkurve-261x300.jpg" alt="Farbraumkurve"><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160413180111.png" alt="QQ截图20160413180111"></p>
+<p><img src="/images/Farbraumkurve.jpg" alt="Farbraumkurve"><br><img src="/images/2016041318.png" alt="20160413180111"></p>
 <p>&nbsp;</p>
 <p>至此我们基本理清了颜色的关系，更多的颜色理论都是从这里出发的推而广之。我们与光的关系是整个绘画和摄影所着重描绘和表现的，而这门现实中的科学则值得我们不断地探索和实践。</p>
 ]]></content>
@@ -125,72 +125,15 @@
     
       &lt;p&gt;我们在开启ps软件之前不妨思考一下这样一个问题，我们的照片或图片，在不同载体上的呈现是否有所不同呢？比如在我们自己的显示器上或者将其在纸张上打印出来，我们是不是观察到了两者在观感上的差异，接下来我将对这些差异背后的原理做一个总结和解释，以供参考。&lt;/p&gt;
 &lt;h2 id=&quot;光与感知的关系&quot;&gt;&lt;a href=&quot;#光与感知的关系&quot; class=&quot;headerlink&quot; title=&quot;光与感知的关系&quot;&gt;&lt;/a&gt;光与感知的关系&lt;/h2&gt;&lt;p&gt;在我们日常的生活中其实有两种非常不一样的颜色模式，可能大多数人并未去仔细区分二者的异同。具体来说，光的表现形式和日常颜色的表现形式是有所不同的，但二者却又互为一体。听起来是否像个哲学式的命题？可能有点。但无论如何，这本质上其实还是是光在不同情况下的表现，在进入人眼途径上一种是直接进入人眼，另一种则经过反射进入人眼，那么我们接下来具体看看这两种模式的原理和具体表现。&lt;/p&gt;
-&lt;h2 id=&quot;1，加色模式&quot;&gt;&lt;a href=&quot;#1，加色模式&quot; class=&quot;headerlink&quot; title=&quot;1，加色模式&quot;&gt;&lt;/a&gt;1，加色模式&lt;/h2&gt;&lt;p&gt;我们先来着眼于光在人眼的感知形式，首先我们要确定的一点是，光的颜色模式是“加色模式”。什么是加色模式？光的三原色是“红（Red），绿（Green），蓝（Blue）”，在数值上每种原色用0-255这个区间共256个数值来表示该原色物理层面上显像像素点的亮度，例如：RGB（113,159,66）表示的就是，红色（R）亮度是113个单位，绿色159个单位，而蓝色66个单位，这三种亮度不同的三原色光混合就得到了一块其他色相的光，在我的电脑上这是一块深绿色。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160413171021-300x200.png&quot; alt=&quot;QQ截图20160413171021&quot;&gt;&lt;/p&gt;
-&lt;p&gt;那么加色模式的具体表现就是，在我们将三种不同的光都设置最大值RGB(255,255,255)时，我们会得到一块白色，而最小值RGB（0,0,0）则会得到一块黑色，这种随着色的增加，最终会得到包罗三原色的白色（可分可逆为三原色）的模式，我们将其称作加色模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.pedclub.net/wp-content/uploads/2016/04/2000px-Bayer_pattern_on_sensor.svg_-300x195.png&quot; alt=&quot;2000px-Bayer_pattern_on_sensor.svg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1，加色模式&quot;&gt;&lt;a href=&quot;#1，加色模式&quot; class=&quot;headerlink&quot; title=&quot;1，加色模式&quot;&gt;&lt;/a&gt;1，加色模式&lt;/h2&gt;&lt;p&gt;我们先来着眼于光在人眼的感知形式，首先我们要确定的一点是，光的颜色模式是“加色模式”。什么是加色模式？光的三原色是“红&lt;code&gt;（Red）&lt;/code&gt;，绿&lt;code&gt;（Green）&lt;/code&gt;，蓝&lt;code&gt;（Blue）&lt;/code&gt;”，在数值上每种原色用&lt;code&gt;0-255&lt;/code&gt;这个区间共&lt;code&gt;256&lt;/code&gt;个数值来表示该原色物理层面上显像像素点的亮度，例如：&lt;code&gt;RGB（113,159,66&lt;/code&gt;）表示的就是，红色（R）亮度是113个单位，绿色159个单位，而蓝色66个单位，这三种亮度不同的三原色光混合就得到了一块其他色相的光，在我的电脑上这是一块深绿色。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2016041317.png&quot; alt=&quot;20160413171021&quot;&gt;&lt;/p&gt;
+&lt;p&gt;那么加色模式的具体表现就是，在我们将三种不同的光都设置最大值&lt;code&gt;RGB(255,255,255)&lt;/code&gt;时，我们会得到一块白色，而最小值&lt;code&gt;RGB（0,0,0）&lt;/code&gt;则会得到一块黑色，这种随着色的增加，最终会得到包罗三原色的白色（可分可逆为三原色）的模式，我们将其称作加色模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2000pxBayer.png&quot; alt=&quot;Bayer_pattern_on_sensor.svg&quot;&gt;&lt;/p&gt;
 &lt;p&gt;或许这有一点反直觉，因为我们在小时候的美术课上将不同颜色颜料混合起来总会得到一块乌黑的颜色，那为什么我们将加色模式的颜色混合起来却得到白色呢？接下来的“减色模式”可能是这个问题的答案。&lt;br&gt;
     
     </summary>
     
       <category term="设计理论" scheme="http://www.pedclub.com/categories/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>安装虚拟系统备忘</title>
-    <link href="http://www.pedclub.com/2016/04/07/VM/"/>
-    <id>http://www.pedclub.com/2016/04/07/VM/</id>
-    <published>2016-04-07T05:58:08.000Z</published>
-    <updated>2016-10-22T11:37:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>近期临近毕业,毕业设计需要很多在32位机器下才能运行的软件，而很多同学电脑的系统都是64位windows。解决办法自然是去重新再装一个32位的系统，而本人近期又需要很多64位下的工作软件，矛盾就来了，因此不得不找寻另外的途径，于是就有了这篇备忘。</p>
-<p>1.首先在这个网站下载安装虚拟机软件<a href="http://rj.baidu.com/soft/detail/13808.html?ald" target="_blank" rel="external">http://rj.baidu.com/soft/detail/13808.html?ald</a></p>
-<p>2.然后再在这个网站<a href="http://www.upmobi.cn/ylxp.html" target="_blank" rel="external">http://www.upmobi.cn/ylxp.html</a>下载windows xp 32位系统镜像。（为什么是xp呢，因为相对较小只有700兆，而且经本人测试完美运行各种32位软件。）<br><a id="more"></a></p>
-<p>3.安装完毕后，打开VMware Workstation软件，会来到这个界面</p>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407125903-300x216.png" alt="QQ截图20160407125903"></p>
-<ul>
-<li><p>点击创建新的虚拟机来到这个界面<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407131536-300x256.png" alt="QQ截图20160407131536"></p>
-</li>
-<li><p>点击典型（推荐），然后下一步，然后来到这个界面<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407131744-300x256.png" alt="QQ截图20160407131744"></p>
-</li>
-<li><p>选择安装程序光盘镜像文件，然后在浏览里打开你下载好的windows xp系统镜像，然后下一步<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407132048-300x256.png" alt="QQ截图20160407132048"></p>
-</li>
-<li><p>按照图中选项选择即可，然后下一步<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407132147-300x256.png" alt="QQ截图20160407132147"></p>
-</li>
-<li><p>按照默认填入就好，直接点击下一步<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407132241-300x256.png" alt="QQ截图20160407132241"></p>
-</li>
-<li><p>按照默认就好，直接点击下一步<br></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407132316-300x256.png" alt="QQ截图20160407132316"></p>
-</li>
-</ul>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407132413-300x139.png" alt="QQ截图20160407132413"></p>
-<ul>
-<li>如果不成功的话，我们先关闭VMware Workstation，再到VMware Workstation软件安装目录下，找到vmware.exe，右键以管理员身份运行，然后重复上面的步骤到此处就可以成功建立虚拟系统引导了<br>接下来点击开启此虚拟机，我们就来到如下界面，<br><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407133120-300x162.png" alt="QQ截图20160407133120"></p></li>
-</ul>
-<p><ins datetime="2016-04-07T05:25:32+00:00">选择B 启动Win PE光盘系统</ins></p>
-<p>我们安装好WinPE后来到系统界面点击<ins datetime="2016-04-07T05:25:32+00:00">硬盘快速分四区</ins></p>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407133249-300x162.png" alt="QQ截图20160407133249"></p>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407133317-300x209.png" alt="QQ截图20160407133317"></p>
-<p>点击确定，这不会删除本来机器上的数据，这可以看做是个虚拟操作。</p>
-<p>分区过程中一路accept就可以。</p>
-<p>分区完成后自动提示你安装xp系统，点击确定就可以了，我们就会来到下面这个界面</p>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407133408-300x162.png" alt="QQ截图20160407133408"></p>
-<p>等待进度条完成即可自动重启进入xp系统的安装，到此虚拟系统就安装成功了。</p>
-<p></p><p class="aligncenter"><br><img src="http://www.pedclub.net/wp-content/uploads/2016/04/QQ截图20160407133552-300x162.png" alt="QQ截图20160407133552"></p>
-<p>安装完毕且进入xp系统后怎样读取到本来文件系统的文件呢，百度有现成的教程”怎样设置虚拟机和主机文件共享”如下</p>
-<p><a href="http://jingyan.baidu.com/article/6b1823095583c1ba58e159a8.html" target="_blank" rel="external">http://jingyan.baidu.com/article/6b1823095583c1ba58e159a8.html</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;近期临近毕业,毕业设计需要很多在32位机器下才能运行的软件，而很多同学电脑的系统都是64位windows。解决办法自然是去重新再装一个32位的系统，而本人近期又需要很多64位下的工作软件，矛盾就来了，因此不得不找寻另外的途径，于是就有了这篇备忘。&lt;/p&gt;
-&lt;p&gt;1.首先在这个网站下载安装虚拟机软件&lt;a href=&quot;http://rj.baidu.com/soft/detail/13808.html?ald&quot;&gt;http://rj.baidu.com/soft/detail/13808.html?ald&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2.然后再在这个网站&lt;a href=&quot;http://www.upmobi.cn/ylxp.html&quot;&gt;http://www.upmobi.cn/ylxp.html&lt;/a&gt;下载windows xp 32位系统镜像。（为什么是xp呢，因为相对较小只有700兆，而且经本人测试完美运行各种32位软件。）&lt;br&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://www.pedclub.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
