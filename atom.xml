@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.pedclub.com/"/>
-  <updated>2016-10-22T17:51:02.000Z</updated>
+  <updated>2016-11-15T11:50:13.000Z</updated>
   <id>http://www.pedclub.com/</id>
   
   <author>
@@ -20,15 +20,31 @@
     <link href="http://www.pedclub.com/2016/10/23/protoImg/"/>
     <id>http://www.pedclub.com/2016/10/23/protoImg/</id>
     <published>2016-10-22T17:39:18.000Z</published>
-    <updated>2016-10-22T17:51:02.000Z</updated>
+    <updated>2016-11-15T11:50:13.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/Vproto.jpg" alt="Prototype"></p>
-<a id="more"></a>
+<h4 id="由图可知"><a href="#由图可知" class="headerlink" title="由图可知"></a>由图可知</h4><ol>
+<li>图中的所有实例除了<code>null</code>以外都有 <code>__proto__</code> 这个属性.</li>
+<li><code>Function</code> 构造函数的原型属性的类型并不是<code>object</code>类型, 而是一个<code>function</code>类型.</li>
+<li>构造函数的<code>__proto__</code>属性都指向<code>Function</code>的原型对象, 包括<code>Function</code>自己.<a id="more"></a></li>
+<li>原型对象的<code>__proto__</code>属性都指向<code>Object</code>的原型对象, 除了<code>Object</code>的原型对象指向<code>null</code>以外.</li>
+<li>对象实例的<code>__proto__</code>属性都指向其构造函数的原型对象.    </li>
+<li><code>__proto__</code>属性是 JavaScript 语言实现原型继承的根本</li>
+<li><code>null</code>的类型是<code>object</code>是设计失误</li>
+</ol>
+<div class="tip"><br>因为每个构造函数上的原型对象属性<code>prototype</code>类似于指针这个概念, 因此要区分清楚当我们更改了<code>prototype</code>的指向后, 并没有随之更改已经由构造函数先前创建好的实例对象中所指向的原型对象, 这个动作导致了构造函数所指原型对象与在这之前构造函数<code>new</code>创建的实例中<code>__proto__</code>所指向的原型对象这两者的不同<br></div>
+
+
+
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;/images/Vproto.jpg&quot; alt=&quot;Prototype&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;由图可知&quot;&gt;&lt;a href=&quot;#由图可知&quot; class=&quot;headerlink&quot; title=&quot;由图可知&quot;&gt;&lt;/a&gt;由图可知&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;图中的所有实例除了&lt;code&gt;null&lt;/code&gt;以外都有 &lt;code&gt;__proto__&lt;/code&gt; 这个属性.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Function&lt;/code&gt; 构造函数的原型属性的类型并不是&lt;code&gt;object&lt;/code&gt;类型, 而是一个&lt;code&gt;function&lt;/code&gt;类型.&lt;/li&gt;
+&lt;li&gt;构造函数的&lt;code&gt;__proto__&lt;/code&gt;属性都指向&lt;code&gt;Function&lt;/code&gt;的原型对象, 包括&lt;code&gt;Function&lt;/code&gt;自己.
     
     </summary>
     
