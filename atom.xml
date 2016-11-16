@@ -218,13 +218,12 @@
   
   <entry>
     <title>数组及字符串方法速查</title>
-    <link href="http://www.pedclub.com/2015/02/14/array&amp;string/"/>
-    <id>http://www.pedclub.com/2015/02/14/array&amp;string/</id>
-    <published>2015-02-14T01:02:21.000Z</published>
-    <updated>2016-11-16T13:42:32.000Z</updated>
+    <link href="http://www.pedclub.com/2015/04/14/array&amp;string/"/>
+    <id>http://www.pedclub.com/2015/04/14/array&amp;string/</id>
+    <published>2015-04-14T01:02:21.000Z</published>
+    <updated>2016-11-16T13:46:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="数组及字符串方法速查"><a href="#数组及字符串方法速查" class="headerlink" title="数组及字符串方法速查"></a>数组及字符串方法速查</h1><p>###一.数组方法</p>
-<ol>
+    <content type="html"><![CDATA[<h1 id="数组及字符串方法速查"><a href="#数组及字符串方法速查" class="headerlink" title="数组及字符串方法速查"></a>数组及字符串方法速查</h1><h2 id="一-数组方法"><a href="#一-数组方法" class="headerlink" title="一.数组方法"></a>一.数组方法</h2><ol>
 <li><p>数组检测</p>
 <blockquote>
 <p>[].isArray(value)</p>
@@ -280,7 +279,8 @@
 <p>sort方法默认会先调用每一个数组项的toString()方法，然后比较得到的字符串，大多数情况下并不适用，因此，这个方法可以传入一个比较函数作为参数。</p>
 <p>比较函数接受两个参数值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">[].sort(compare*)；</div><div class="line"></div><div class="line">升序</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare1</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(value1 &gt; value2)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">降序</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare2</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(value1 &lt; value2)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">优化版本</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare3</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> value2 - value1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a></li>
+<a id="more"></a>
+</li>
 <li><p>操作方法</p>
 <blockquote>
 <p>[].concat()</p>
@@ -341,8 +341,7 @@
 <p>[].reduce()<br>[].reduceRight()</p>
 </blockquote>
 <p> handle函数返回的任何值，都会在下一次迭代以第一个参数prev自动传入<br> 唯一的区别是一个从开始到末尾，一个从末尾到开始。</p>
-<p>###三.字符串的方法</p>
-<ol>
+<h2 id="二-字符串的方法"><a href="#二-字符串的方法" class="headerlink" title="二.字符串的方法"></a>二.字符串的方法</h2><ol>
 <li><p>字符方法</p>
 <blockquote>
 <p>charAt(number)</p>
@@ -418,8 +417,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;数组及字符串方法速查&quot;&gt;&lt;a href=&quot;#数组及字符串方法速查&quot; class=&quot;headerlink&quot; title=&quot;数组及字符串方法速查&quot;&gt;&lt;/a&gt;数组及字符串方法速查&lt;/h1&gt;&lt;p&gt;###一.数组方法&lt;/p&gt;
-&lt;ol&gt;
+      &lt;h1 id=&quot;数组及字符串方法速查&quot;&gt;&lt;a href=&quot;#数组及字符串方法速查&quot; class=&quot;headerlink&quot; title=&quot;数组及字符串方法速查&quot;&gt;&lt;/a&gt;数组及字符串方法速查&lt;/h1&gt;&lt;h2 id=&quot;一-数组方法&quot;&gt;&lt;a href=&quot;#一-数组方法&quot; class=&quot;headerlink&quot; title=&quot;一.数组方法&quot;&gt;&lt;/a&gt;一.数组方法&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;数组检测&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[].isArray(value)&lt;/p&gt;
@@ -483,10 +481,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.pedclub.com/2015/01/14/hello-world/"/>
-    <id>http://www.pedclub.com/2015/01/14/hello-world/</id>
-    <published>2015-01-14T06:22:49.000Z</published>
-    <updated>2016-11-16T13:42:10.000Z</updated>
+    <link href="http://www.pedclub.com/2015/03/14/hello-world/"/>
+    <id>http://www.pedclub.com/2015/03/14/hello-world/</id>
+    <published>2015-03-14T06:22:49.000Z</published>
+    <updated>2016-11-16T13:46:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
