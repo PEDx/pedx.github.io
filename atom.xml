@@ -221,9 +221,9 @@
     <link href="http://www.pedclub.com/2015/04/14/array&amp;string/"/>
     <id>http://www.pedclub.com/2015/04/14/array&amp;string/</id>
     <published>2015-04-14T01:02:21.000Z</published>
-    <updated>2016-11-16T13:46:21.000Z</updated>
+    <updated>2016-11-16T13:52:29.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="数组及字符串方法速查"><a href="#数组及字符串方法速查" class="headerlink" title="数组及字符串方法速查"></a>数组及字符串方法速查</h1><h2 id="一-数组方法"><a href="#一-数组方法" class="headerlink" title="一.数组方法"></a>一.数组方法</h2><ol>
+    <content type="html"><![CDATA[<h2 id="一-数组方法"><a href="#一-数组方法" class="headerlink" title="一.数组方法"></a>一.数组方法</h2><ol>
 <li><p>数组检测</p>
 <blockquote>
 <p>[].isArray(value)</p>
@@ -398,7 +398,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> text = <span class="string">"cat, bat, sat, fat"</span>; </div><div class="line">result = text.replace(<span class="regexp">/(.at)/g</span>, <span class="string">"word ($1)"</span>); </div><div class="line">alert(result); </div><div class="line"><span class="comment">//word (cat), word (bat), word (sat), word (fat)</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p> 参数二还可以是一个函数, repleace 会向函数传递 3 个参数, 分别是模式的匹配项、模式匹配项在字符串中的位置和原始字符串。在正则表达式中定义了多个捕获组的情况下, 传递给函数的参数依次是模式的匹配项、第一个捕获组的匹 配项、第二个捕获组的匹配项……, 但最后两个参数仍然分别是模式的匹配项在字符串中的位置和原始字符串。</p>
+<p>参数二还可以是一个函数, repleace 会向函数传递 3 个参数, 分别是模式的匹配项、模式匹配项在字符串中的位置和原始字符串。在正则表达式中定义了多个捕获组的情况下, 传递给函数的参数依次是模式的匹配项、第一个捕获组的匹 配项、第二个捕获组的匹配项……, 但最后两个参数仍然分别是模式的匹配项在字符串中的位置和原始字符串。</p>
  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> text.replace(<span class="regexp">/[&lt;&gt;"&amp;]/g</span>, <span class="function"><span class="keyword">function</span>(<span class="params">match, pos, originalText</span>)</span>&#123; </div><div class="line">    <span class="keyword">switch</span>(match)&#123; </div><div class="line">        <span class="keyword">case</span> <span class="string">"&lt;"</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">"&amp;lt;"</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">"&gt;"</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">"&amp;gt;"</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">"&amp;"</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">"&amp;amp;"</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">"\""</span>:</div><div class="line">        <span class="keyword">return</span> <span class="string">"&amp;quot;"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <blockquote>
 <p>string.split()</p>
@@ -417,7 +417,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;数组及字符串方法速查&quot;&gt;&lt;a href=&quot;#数组及字符串方法速查&quot; class=&quot;headerlink&quot; title=&quot;数组及字符串方法速查&quot;&gt;&lt;/a&gt;数组及字符串方法速查&lt;/h1&gt;&lt;h2 id=&quot;一-数组方法&quot;&gt;&lt;a href=&quot;#一-数组方法&quot; class=&quot;headerlink&quot; title=&quot;一.数组方法&quot;&gt;&lt;/a&gt;一.数组方法&lt;/h2&gt;&lt;ol&gt;
+      &lt;h2 id=&quot;一-数组方法&quot;&gt;&lt;a href=&quot;#一-数组方法&quot; class=&quot;headerlink&quot; title=&quot;一.数组方法&quot;&gt;&lt;/a&gt;一.数组方法&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;数组检测&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[].isArray(value)&lt;/p&gt;
